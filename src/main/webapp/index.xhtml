@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="/mainTemplate.xhtml">
+
+    <!--
+        This acts as a client of the template. Note that the ui:define tag
+        has a name attribute that must match the name attribute of the 
+        ui:insert tag in the template. You can have more than one ui:define
+        in a client page, with matching ui:inserts in the template. Also,
+        note that a reference to the template file must be present in the
+        namespace section above.
+    -->
+    <ui:define name="content">
+        Welcome to JRS Bookstore.  We offer the following abilities:
+        <ul>
+            <li>Ordering</li>
+            <li>Administration</li>
+            <ul>
+                <li>Adding</li>
+                <li>Deleting</li>
+                <li>Searching</li>
+            </ul>
+        </ul>
+        <br/>
+        <h:link value="go to page 2" outcome="page2"/><br/>
+        <h:link value="go to admin home" outcome="admin/admin"/><br/>
+        <!-- use the JavaScript function referenced in the template -->
+        <h:link value="Say Hello" onclick="sayHello()" outcome="home"/>
+    </ui:define>
+    
+</ui:composition>

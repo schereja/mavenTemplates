@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="/mainTemplate.xhtml"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <!--
+        This acts as a client of the template. Note that the ui:define tag
+        has a name attribute that must match the name attribute of the 
+        ui:insert tag in the template. You can have more than one ui:define
+        in a client page, with matching ui:inserts in the template. Also,
+        note that a reference to the template file must be present in the
+        namespace section above.
+    -->
+    <ui:define name="content">
+        <h:dataTable >
+            <h:column>
+                <f:facet name="header">Book Title</f:facet>                    
+            </h:column>
+             <h:column>
+                <f:facet name="header">Book Description</f:facet>                    
+            </h:column>
+             <h:column>
+                <f:facet name="header">Book Price</f:facet>                    
+            </h:column>
+             <h:column>
+                <f:facet name="header">Qty in Stock</f:facet>                    
+            </h:column>
+        </h:dataTable>
+        <br/>
+     </ui:define>
+    
+</ui:composition>
